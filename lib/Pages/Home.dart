@@ -98,7 +98,12 @@ class _HomeState extends State<Home> {
           Padding(
             padding: EdgeInsets.symmetric(vertical: H *0.01),
             child: ScrollableGamesWidget(height: H*0.24,width: W,showTitle: true,gameData: games,),
-          )
+          ),
+          _featuredGameBannerWidget(),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: H *0.01),
+            child: ScrollableGamesWidget(height: H*0.22,width: W,showTitle: false,gameData: games2,),
+          ),
         ],
       ),
     );
@@ -176,12 +181,22 @@ class _HomeState extends State<Home> {
               );
             }).toList(),
           )
-
-
         ],
       ),
     );
     }
-
+    Widget _featuredGameBannerWidget(){
+    return Container(
+      height: H*0.13,
+      width: W,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+            image: NetworkImage(featuredGames[3].coverImage.url)
+        )
+      ),
+    );
+    }
 
   }
