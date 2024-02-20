@@ -16,6 +16,28 @@ class Game {
 }
 
 List<Game> games = [
+
+  ///////
+
+  Game(
+    "Helldivers 2",
+    GameImage(
+        "https://www.newgamenetwork.com/images/uploads/games/1702355070_helldivers2.jpg",
+        ""),
+    "",
+    "Massive Entertainment",
+  ),
+
+  Game(
+    "Banishers: Ghosts of New Eden",
+    GameImage(
+        "https://www.newgamenetwork.com/images/uploads/games/1695697170_banishersbox.jpg",
+        ""),
+    "",
+    "Massive Entertainment",
+  ),
+
+////////
   Game(
     "Horizon Zero Dawn",
     GameImage(
@@ -40,6 +62,8 @@ List<Game> games = [
     "",
     "Massive Entertainment",
   ),
+
+
   Game(
     "Resident Evil 2",
     GameImage(
@@ -59,20 +83,7 @@ List<Game> games2 = [
     "",
     "Rockstar Games",
   ),
-  Game(
-    "The Last of Us Part II",
-    GameImage("https://mvpo.us/img/P6253.jpg", ""),
-    "",
-    "Naughty Dog",
-  ),
-  Game(
-    "Sekiro: Shadows Die Twice",
-    GameImage(
-        "https://onlysp.escapistmagazine.com/wp-content/uploads/2019/03/Sekiro-Shadows-Die-Twice-logo-art.jpg",
-        ""),
-    "",
-    "From Software",
-  ),
+
   Game(
     "Just Cause 4",
     GameImage(
@@ -81,6 +92,32 @@ List<Game> games2 = [
     "",
     "Avalanche Studios",
   ),
+  ////
+  Game(
+    "Grand Theft Auto V",
+    GameImage(
+        "https://www.newgamenetwork.com/images/uploads/games/1630631360_horizonfw.jpg",
+        ""),
+    "",
+    "Rockstar Games",
+  ),
+  Game(
+    "Grand Theft Auto V",
+    GameImage(
+        "https://www.newgamenetwork.com/images/uploads/games/1685214095_aloneindark2023.jpg",
+        ""),
+    "",
+    "Rockstar Games",
+  ),
+  Game(
+    "Grand Theft Auto V",
+    GameImage(
+        "https://www.newgamenetwork.com/images/uploads/games/1705773743_homeworld3.jpg",
+        ""),
+    "",
+    "Rockstar Games",
+  ),
+  ////
 ];
 
 List<Game> featuredGames = [

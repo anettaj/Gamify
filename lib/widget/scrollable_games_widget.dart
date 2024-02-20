@@ -26,6 +26,7 @@ class ScrollableGamesWidget extends StatelessWidget {
           return Container(
             height: height,
             width: width*0.30,
+            padding: EdgeInsets.only(right: 5),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               mainAxisSize: MainAxisSize.max,
@@ -43,11 +44,13 @@ class ScrollableGamesWidget extends StatelessWidget {
                     )
                   ),
                 ),
-                showTitle? Text(_game.title,
-                  maxLines: 2,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: height*0.08
+                showTitle? Container(
+                  child: Text(_game.title,
+                    maxLines: 2,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: height*0.06
+                    ),
                   ),
                 ):Container()
               ],

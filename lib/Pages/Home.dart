@@ -25,13 +25,15 @@ class _HomeState extends State<Home> {
     H=MediaQuery.of(context).size.height;
     W=MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Stack(
-        children: [
-          featuredGameWidget(),
-          gradiantBoxWidget(),
-          topLayerWidget()
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            featuredGameWidget(),
+            gradiantBoxWidget(),
+            topLayerWidget()
 
-        ],
+          ],
+        ),
       )
     );
   }
@@ -66,7 +68,7 @@ class _HomeState extends State<Home> {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        height: H*0.80,
+        height: H*1.03,
         decoration: BoxDecoration(
           gradient: LinearGradient(
               colors:[
@@ -85,7 +87,7 @@ class _HomeState extends State<Home> {
 
   Widget topLayerWidget() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: H *0.05,vertical: H*0.005 ),
+      padding: EdgeInsets.symmetric(horizontal: H *0.02,vertical: H*0.001 ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -95,10 +97,7 @@ class _HomeState extends State<Home> {
             height: H*0.15,
           ),
           _featuredGameInfoWidget(),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: H *0.01),
-            child: ScrollableGamesWidget(height: H*0.24,width: W,showTitle: true,gameData: games,),
-          ),
+          ScrollableGamesWidget(height: H*0.24,width: W,showTitle: true,gameData: games,),
           _featuredGameBannerWidget(),
           Padding(
             padding: EdgeInsets.symmetric(vertical: H *0.01),
